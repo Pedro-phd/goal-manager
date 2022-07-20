@@ -1,3 +1,4 @@
+import { device } from '@/styles/devices'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -9,6 +10,9 @@ export const Container = styled.div`
     height: calc(100vh - 90px);
     .content {
       padding: 32px;
+      @media ${device.mobile}{
+        padding: 16px;
+      }
     }
   }
 `

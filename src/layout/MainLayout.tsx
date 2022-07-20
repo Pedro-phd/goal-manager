@@ -1,4 +1,4 @@
-import Menu from '@/components/Menu'
+import MenuComponent from '@/components/Menu'
 import Header from '@/components/Header'
 import { Container } from './styles'
 
@@ -9,7 +9,7 @@ const MainLayout = ({children}:any) => {
         <Header />
       </div>
       <div className="view"> 
-        <Menu/>
+        <MenuComponent/>
         <div className="content">
           {children}
         </div>

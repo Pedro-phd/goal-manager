@@ -1,3 +1,4 @@
+import { device } from '@/styles/devices'
 import styled from 'styled-components'
 
 export const Container = styled.div`
@@ -13,6 +14,17 @@ export const Container = styled.div`
     display: flex;
     border-bottom: 1px solid #F0EFF1;
     align-items: center;
+  }
+  @media ${device.mobile} {
+    height: 45px;
+    font-size: 12px;
+    background-color: ${props => props.theme.colors.gray}
+    box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.15);
+    .project-name {
+      margin-left: 0;
+      padding-left: 16px;
+      height: 45px;
+    }
   }
 `
 export const LogoContainer = styled.div`
@@ -35,5 +47,8 @@ export const LogoContainer = styled.div`
     color: white;
     width: 40px;
     height: 40px;
+  }
+  @media ${device.mobile} {
+    display: none;    
   }
 `
