@@ -14,6 +14,9 @@ export const Container = styled.div`
     display: flex;
     border-bottom: 1px solid #F0EFF1;
     align-items: center;
+    svg { 
+      display: none;
+    }
   }
   @media ${device.mobile} {
     height: 45px;
@@ -24,6 +27,10 @@ export const Container = styled.div`
       margin-left: 0;
       padding-left: 16px;
       height: 45px;
+      gap: 16px;
+      svg { 
+        display: inline-block;
+      }
     }
   }
 `

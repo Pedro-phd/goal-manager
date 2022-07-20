@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import * as S from './styles'
-import { Home, Layers, Users, Menu, X} from 'react-feather'
+import { Home, Layers, Users, ArrowLeft, ArrowRight} from 'react-feather'
 import Link from 'next/link'
 
 
@@ -22,8 +22,8 @@ const MenuComponent = () => {
           <S.Icon><Users /></S.Icon>
         </Link>
       </S.Container>
-      <S.MobileMenu onClick={() => setOpened(!opened)}>
-        {!opened ? <Menu /> : <X /> }
+      <S.MobileMenu onClick={() => setOpened(!opened)} opened={opened}>
+        {!opened ? <ArrowRight /> : <ArrowLeft /> }
       </S.MobileMenu>
     </>
   )

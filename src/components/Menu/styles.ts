@@ -17,7 +17,7 @@ export const Container = styled.div`
   transition: all 0.3s ease-in-out;
   @media ${device.mobile} {
     position:fixed;
-    left: ${(props:ContainerProps) => !props.opened ? '-90px' : '0px'};
+    left: ${(props:ContainerProps) => !props.opened ? '-75px' : '0px'};
     height: calc(100vh - 45px);
     box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.15)
   }
@@ -53,18 +53,26 @@ export const Icon = styled.div`
 
 export const MobileMenu = styled.div`
   display: none;
-  width: 50px;
-  height: 50px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  background-color: ${props => props.theme.colors.primary};
+  background-color: ${props => props.theme.colors.gray};
   justify-content: center;
   align-items:center;
-  color: white;
-  transition: all 0.1s ease-in-out;
+  color: ${props => props.theme.colors.primary};
+  transition: all 0.3s ease-in-out;
+  border: 1px solid ${props => props.theme.colors.darkGray};
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.15);
+  svg {
+    width:18px;
+    height:18px;
+  }
   @media ${device.mobile}{
     display: flex;
-    position: fixed;
-    right: 40px;
-    bottom: 100px;
+    position: absolute;
+    top: 50%;
+    left: ${(props:ContainerProps) => !props.opened ? '15px' : '90px'};
+    transform: translate(-50%, -50%);
+    
   }
 `

@@ -12,6 +12,7 @@ export const Container = styled.div`
       padding: 32px;
       @media ${device.mobile}{
         padding: 16px;
+        padding-left: 31px;
       }
     }
   }
